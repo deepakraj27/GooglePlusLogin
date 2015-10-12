@@ -86,6 +86,7 @@
     ViewController *home = [self.storyboard instantiateViewControllerWithIdentifier:@"home"];
     [self presentViewController:home animated:NO completion:nil];
     NSLog(@"logout successfully");
+    [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"LoginType"];
     [MBProgressHUD hideHUDForView:self.view animated:YES];
 }
 @end
